@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="./css/feedback_form.css">
+</head>
+<body>
+    <div class="feedback-container">
+        <h2>Your Feedback Fuels Our Progress!</h2>
+        <div class="emoji-group">
+            <h3>Rate:</h3>
+            <span class="emoji" onclick="selectEmoji(this)">&#128544;</span>
+            <span class="emoji" onclick="selectEmoji(this)">&#128542;</span>
+            <span class="emoji" onclick="selectEmoji(this)">&#128528;</span>
+            <span class="emoji" onclick="selectEmoji(this)">&#128578;</span>
+            <span class="emoji" onclick="selectEmoji(this)">&#128513;</span>
+        </div>
+        <div class="input-group">
+            <textarea placeholder="How can we improve?"></textarea>
+        </div>
+        <button class="submit-btn">Send your Feedback</button>
+    </div>
+
+    <script src="js/feedback_form.js"></script>
+</body>
+</html>

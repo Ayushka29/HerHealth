@@ -1,0 +1,172 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Signup container styling */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Signup card design with border */
+.signup-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #f78fb3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for the signup card */
+.signup-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading and description styling */
+.signup-card h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+.signup-card .description {
+    text-align: center;
+    font-size: 14px;
+    color: #6a6a6a;
+    margin-bottom: 20px;
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="date"],
+.input-group input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s, background-color 0.3s;
+}
+
+/* Styling for invalid inputs */
+.input-group input:invalid:required {
+    border-color: rgb(250, 198, 198);
+    background-color: #f3e6e6;
+}
+
+.input-group input:invalid:required::placeholder {
+    color: rgb(102, 88, 88);
+    opacity: 1;
+}
+
+/* Styling for focused inputs */
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="date"]:focus,
+.input-group input[type="tel"]:focus {
+    border-color: #fcaac7;
+    outline: none;
+}
+
+/* Corrected and styled radio buttons */
+.radio-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+}
+
+.radio-group label {
+    font-size: 16px;
+    color: #4a4a4a;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Hover effect for the labels */
+.radio-group label:hover {
+    color: #79555b; /* Darker pink for hover */
+}
+
+/* Focus effect for radio button labels */
+.radio-group input[type="radio"]:focus + label {
+    color: #d4576e;
+}
+
+/* Submit button styling */
+.signup-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    background-color: #f78fb3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #ff6b6b;
+    transform: scale(1.05);
+}
+
+/* Sign in link styling */
+.signin-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signin-link a {
+    color: #f78fb3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signin-link a:hover {
+    color: #d4576e;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+    margin-top: 5px;
+}

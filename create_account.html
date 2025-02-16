@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <link rel="stylesheet" href="./css/create_account.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-card">
+            <h2>Create Your Account</h2>
+            <p class="description">Join us for personalized health care</p>
+            <form id="signupForm" action="./submit_signup.html" method="GET">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="text" id="contact" name="contact" placeholder="Enter your contact number" required>
+                    <p class="error-message" id="contactError"></p>
+                </div>
+                <div class="input-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                    <p class="error-message" id="dobError"></p>
+                </div>
+                <div class="input-group">
+                    <label for="user-type">I am a</label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="patient" name="user_type" value="patient" required>
+                        <label for="patient">Patient</label>
+                        <input type="radio" id="doctor" name="user_type" value="doctor">
+                        <label for="doctor">Doctor</label>
+                    </div>
+                </div>
+                <div class="submit-group">
+                    <button type="submit" class="signup-btn">Submit</button>
+                </div>
+            </form>
+            <p class="signin-link">Already have an account? <a href="sign_in.html">Sign in</a></p>
+        </div>
+    </div>
+   
+    <script src="js/create_account.js"></script>
+</body>
+</html>

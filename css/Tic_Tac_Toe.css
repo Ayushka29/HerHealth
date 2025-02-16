@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "Plain regular";
+    src: url('../fonts/plain-regular-webfont.ttf');
+}
+@font-face {
+    font-family:"Plain light" ;
+    src: url('../fonts/plain-light-webfont.ttf');
+}
+@font-face {
+    font-family: "Light italic";
+    src: url('../fonts/silkserif-lightitalic-webfont.ttf');
+}
+@font-face {
+    font-family: "Regular italic";
+    src: url('../fonts/silkserif-regularitalic-webfont.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Plain regular";
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+main{
+    width: 100%;
+    height: 100%;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    /* font-family: "Plain regular";  */
+    /* background-color: #f0f8ff;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    /* background-color: red; */
+}
+
+h1 {
+    font-size: 6vw;
+    color: #3498db;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Board Styling */
+.board {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 5px solid #3498db;
+    border-radius: 15px;
+    background-color: #f5f5f5;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.1s ease, transform 0.2s ease; /* Reduced transition time for color change */
+}
+
+.cell.x {
+    color: #3498db; /* Blue for X */
+}
+
+.cell.o {
+    color: #e74c3c; /* Orange for O */
+}
+
+.cell:hover {
+    transform: scale(1.1);
+    background-color: #ecf0f1; /* Light grey hover effect */
+}
+
+
+#status {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #34495e;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+/* Name Input Styling */
+#nameInput {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+    /* background-color: red; */
+}
+
+#nameInput div {
+    margin-bottom: 15px;
+}
+
+#nameInput label {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+#nameInput input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    width: 60%;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+}
+
+#nameInput input:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+#nameInput button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#nameInput button:hover {
+    background-color: #2980b9;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+ /* Party Boom Effect */
+.party {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, #ff9ff3, #feca57);
+    border-radius: 50%;
+    animation: partyBoom 1s ease-out forwards;
+    pointer-events: none; /* Make sure it doesn't interfere with game board interaction */
+}
+
+@keyframes partyBoom {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(3); opacity: 0; }
+}
+
+
+/* Additional shapes for party booms */
+.party.square {
+    border-radius: 0%; /* Makes them square */
+}
+
+.party.triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #feca57; /* Triangle shape */
+}
+
+.party.diamond {
+    width: 40px;
+    height: 40px;
+    background: #feca57;
+    transform: rotate(45deg); /* Diamond shape */
+}
+@media only screen and (max-width: 870px) {
+
+    h1{
+        font-size: 10vw;
+    }
+    .board {
+        gap: 00px;
+        padding: 5px;
+    }
+    
+    #nameInput label {
+        font-size: 5vw;
+
+    }
+    
+}

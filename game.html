@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Uplifter Games</title>
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+<body>
+    <header>
+        <h1 class="wave-heading">
+            <span>Mood Uplifter Games</span>
+        </h1>
+    </header>
+    <div class="games-container">
+        <div class="game-box" onclick="startGame('Animal Crossing')">Animal Crossing</div>
+        <div class="game-box" onclick="startGame('Stardew Valley')">Stardew Valley</div>
+        <div class="game-box" onclick="startGame('Click Counter')">Click Counter</div>
+        <div class="game-box" onclick="startGame('Journey')">Journey</div>
+        <div class="game-box" onclick="startGame('Tetris Effect')">Tetris Effect</div>
+    </div>
+
+    <div id="gameContainer" class="game-container hidden">
+        <div id="gameContent">
+            <!-- Game content will be injected here -->
+        </div>
+        <button onclick="closeGame()" class="close-button">Close Game</button>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>

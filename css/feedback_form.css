@@ -1,0 +1,82 @@
+@font-face {
+    font-family: "Plain regular";
+    src: url('../fonts/plain-regular-webfont.ttf');
+}
+@font-face {
+    font-family:"Plain light" ;
+    src: url('../fonts/plain-light-webfont.ttf');
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #ffe4e1; */
+    background-image: url("/img/bg1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+.feedback-container {
+    background-color:transparent;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    width: 300px;
+
+}
+.feedback-container h2 {
+    font-size: 21px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: "Plain regular";
+    line-height: 28px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 10); */
+}
+.emoji-group {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    /* background-color: #c455ae; */
+}
+.emoji {
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.emoji.selected {
+    opacity: 1;
+}
+.input-group {
+    margin: 20px 0;
+    text-align: left;
+}
+.input-group textarea, .input-group input {
+    width: 90%;
+    padding: 20px;
+    margin-top: 5px;
+    border: 1px solid #9b9898;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: "Plain regular";
+
+}
+.submit-btn {
+    background-color: #d867b2;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 60%;
+    transition: all linear 0.3s;
+}
+.submit-btn:hover {
+    background-color: #eb32ad;
+}

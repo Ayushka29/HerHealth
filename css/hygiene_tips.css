@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Plain regular";
+    src: url('../fonts/plain-regular-webfont.ttf');
+}
+@font-face {
+    font-family:"Plain light" ;
+    src: url('../fonts/plain-light-webfont.ttf');
+}
+body {
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: #ffe4e6;
+    color: #333;
+}
+/* header {
+    background-color: #ff639a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+} */
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30%;
+    background-color: #f67dc7;
+    padding: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.home-icon {
+    text-decoration: none;
+    color: #fff;
+    font-size: 26px;
+}
+
+.home-icon:hover {
+    color: rgb(161, 160, 160)
+}
+.container {
+    padding: 20px;
+}
+.basic-tips {
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: fit-content;
+}
+.basic-tips:hover {
+    transform: scale(1.05);
+}
+.basic-tips h2 {
+    font-family: "Plain regular";
+    color: #ff639a;
+}
+.basic-tips ul li{
+    font-family: "Plain regular";
+    font-size: 1.2vw;
+    line-height: 40px;
+}
+.dropdown {
+    margin: 20px 0;
+    position: relative;
+    display: inline-block;
+    
+}
+.dropdown select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+#disease_tips{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.tip {
+    width: fit-content;
+    background-color: #fff;
+    margin: 15px 0;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+   
+}
+.tip:hover {
+    transform: scale(1.05);
+}
+.tip h2 {
+    font-family: "Plain regular";
+    color: #ff639a;
+}
+.tip ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.tip li {
+    font-family: "Plain regular";
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 1.2vw;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff639a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+.back-to-top:hover {
+    background-color: #ff426e;
+}
