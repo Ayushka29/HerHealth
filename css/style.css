@@ -378,6 +378,8 @@ header{
 @media (max-width: 1024px) {
     .card-wrapper {
         flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        justify-content: center;
+
     }
     .card-container {
         width: 48%; /* Two cards per line on medium screens */
